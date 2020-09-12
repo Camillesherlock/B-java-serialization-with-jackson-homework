@@ -1,5 +1,6 @@
 package com.thoughtworks.capability.gtb.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.thoughtworks.capability.gtb.serializer.DataSerializer;
@@ -16,7 +17,7 @@ public class EventVo {
   private String id;
   private String name;
   private EventType type;
-  @JsonSerialize(using=DataSerializer.class)
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private Date time;
   @JsonUnwrapped
   private UserVo user;
