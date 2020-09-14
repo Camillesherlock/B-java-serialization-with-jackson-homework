@@ -11,7 +11,6 @@ import java.util.Date;
 
 @RestController
 @Slf4j
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class EventController {
   @GetMapping("/events/{id}")
   public EventVo getEventById(@PathVariable("id") String id) {

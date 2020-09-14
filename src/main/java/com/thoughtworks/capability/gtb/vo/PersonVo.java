@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonSerialize(using= PersonSerializer.class)
 public class PersonVo {
-
   private String id;
   private Integer age;
   private String name;
